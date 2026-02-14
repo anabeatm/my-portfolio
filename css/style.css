@@ -5,15 +5,22 @@
 }
 
 body {
-  background-color: #fce4ec;
+  background-color: #fcf9fa;
   font-family: Nunito;
 }
 
 #informations {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 2px;
+  gap: 24px;
   padding: 48px;
+  align-items: start;
+}
+
+#menu,
+.me,
+.title {
+  grid-column: 1;
 }
 
 #menu {
@@ -47,6 +54,8 @@ body {
 #menu ul li a:hover {
   color: #333;
   background-color: #f0f0f0;
+
+  transform: translateY(-3px);
 }
 
 #menu ul li a.active {
@@ -102,7 +111,95 @@ nav {
   margin: 0;
 }
 
+.title {
+  text-align: left;
+  padding: 30px;
+
+  background-color: white;
+  border: 1px solid #f8a5c2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title h1 {
+  color: #4b4b4b;
+  font-size: 3.5rem;
+  line-height: 0.9;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.title h1 span {
+  color: #f8a5c2;
+}
+
+.title p {
+  color: #888;
+  font-size: 1.1rem;
+  max-width: 80%;
+}
+
+.title nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin-top: 5px;
+  padding: 0;
+}
+
+.title nav ul a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  background-color: #fff0f5;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.5rem;
+
+  transition: 0.3s;
+}
+
+.title nav ul a:hover {
+  background-color: #f8a5c2;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.icons {
+  padding: 5.9px;
+}
+
 .get_in_touch {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
   grid-column: 2;
   grid-row: 1 / span 3;
+}
+
+.get_in_touch .mailbox,
+.get_in_touch .email,
+.get_in_touch .location {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ph-mailbox,
+.icon-box {
+  background-color: #fff0f5;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 1.2rem;
 }
