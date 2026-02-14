@@ -26,8 +26,8 @@ header {
   align-items: start;
 
   background-image:
-    linear-gradient(rgba(248, 165, 194, 0.3), rgba(248, 165, 194, 0.3)),
-    url("/assets/header-background.jpg");
+    linear-gradient(rgba(248, 165, 194, 0.5), rgba(248, 165, 194, 0.5)),
+    url("../assets/header-background.jpg");
 
   background-size: cover;
   background-position: center;
