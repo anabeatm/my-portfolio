@@ -22,10 +22,10 @@
               <a href="index.html" class="active">portfolio</a>
             </li>
             <li>
-              <a href="pages/projects.html">projects</a>
+              <a href="#" id="btn-projects">projects</a>
             </li>
             <li>
-              <a href="pages/contact.html">contact</a>
+              <a href="#" id="btn-contact">contact</a>
             </li>
           </ul>
         </nav>
@@ -98,7 +98,45 @@
         </div>
       </div>
     </header>
-    <main></main>
+
+    <main>
+      <div id="window-projects" class="window" style="display: none">
+        <div class="title-bar">
+          <div class="title-bar-text">
+            <i class="ph ph-folder-open"></i>
+            Projects
+          </div>
+          <div class="title-bar-controls">
+            <button class="close-btn" data-target="window-projects">
+              <i class="ph ph-x"></i>
+            </button>
+          </div>
+        </div>
+        <div class="window-content">
+          <h2>My Projects 🌸</h2>
+          <p>placeholder</p>
+        </div>
+      </div>
+
+      <div id="window-contact" class="window" style="display: none">
+        <div class="title-bar">
+          <div class="title-bar-text">
+            <i class="ph ph-chat-circle-text"></i>
+            Contact
+          </div>
+          <div class="title-bar-controls">
+            <button class="close-btn" data-target="window-contact">
+              <i class="ph ph-x"></i>
+            </button>
+          </div>
+        </div>
+        <div class="window-content">
+          <h2>Chat with me 📫</h2>
+          <p>placeholder</p>
+        </div>
+      </div>
+    </main>
+
     <footer>
       <div id="copyright">
         <h3>crafted with 💕 and ☕</h3>
