@@ -1,0 +1,398 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fcf9fa;
+  font-family: Nunito;
+  min-height: 100vh;
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  align-items: center;
+}
+
+#informations {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 30px;
+  padding: 48px;
+  margin-top: 50px;
+  align-items: start;
+
+  background-image:
+    linear-gradient(rgba(248, 165, 194, 0.5), rgba(248, 165, 194, 0.5)),
+    url("../assets/header-background.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 50px;
+  padding: 60px;
+
+  /* width: 90%;
+  max-width: 1200px; */
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: 10px solid #f2dde6;
+}
+
+#menu,
+.me,
+.title {
+  grid-column: 1;
+}
+
+#menu,
+.me {
+  width: fit-content;
+}
+
+#menu {
+  background-color: #fcfcfc;
+  padding: 8px 30px;
+  border-radius: 50px;
+  width: fit-content;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f8a5c2;
+
+  min-width: 350px;
+}
+
+#menu ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  align-items: center;
+  margin: 0;
+  padding: 10px;
+}
+
+#menu ul li a {
+  text-decoration: none;
+  color: #666;
+  font-weight: 500;
+  font-size: 600;
+
+  padding: 10px 25px;
+  border-radius: 50px;
+  display: block;
+  transition: 0.3s;
+}
+
+#menu ul li a:hover {
+  color: #333;
+  background-color: #f0f0f0;
+
+  transform: translateY(-3px);
+}
+
+#menu ul li a.active {
+  background-color: #f8a5c2;
+  color: white;
+  font-weight: bold;
+}
+
+.me,
+.title,
+.get_in_touch,
+nav {
+  background-color: #fcfcfc;
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.me {
+  position: relative;
+  padding: 20px;
+  border-radius: 60px;
+  width: fit-content;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  border: 5px solid #f8a5c2;
+}
+
+.me img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+}
+
+.status {
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+
+  background-color: white;
+  padding: 5px 15px;
+  border-radius: 50px;
+  border: 1px solid #f8a5c2;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  white-space: nowrap;
+}
+
+.status p {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #666;
+  margin: 0;
+}
+
+.title {
+  text-align: left;
+  padding: 30px;
+
+  width: 100%;
+  box-sizing: border-box;
+  grid-column: 1;
+  margin-top: auto;
+
+  background-color: white;
+  border: 1px solid #f8a5c2;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.title h1 {
+  color: #4b4b4b;
+  font-size: 3.5rem;
+  line-height: 0.9;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.title h1 span {
+  color: #f8a5c2;
+}
+
+.title p {
+  color: #888;
+  font-size: 1.1rem;
+  max-width: 80%;
+}
+
+.title nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+  margin-top: 5px;
+  padding: 0;
+}
+
+.title nav ul a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  background-color: #fff0f5;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.5rem;
+
+  transition: 0.3s;
+}
+
+.title nav ul a:hover {
+  background-color: #f8a5c2;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.icons {
+  padding: 5.9px;
+}
+
+.get_in_touch {
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  justify-content: space-between;
+
+  gap: 20px;
+  grid-column: 2;
+  grid-row: 1 / span 3;
+
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f8a5c2;
+}
+
+.get_in_touch .mailbox,
+.get_in_touch .email,
+.get_in_touch .location {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.ph-mailbox,
+.icon-box {
+  background-color: #fff0f5;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #333;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.icon-box {
+  background-color: #fff0f5;
+  border-radius: 50%;
+}
+
+.mailbox {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 650;
+}
+
+.email,
+.location {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.text-info p {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+.text-info h3 {
+  color: #333;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.get_in_touch button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+
+  background: linear-gradient(90deg, #e8b5c7);
+
+  border-radius: 20px;
+  color: white;
+  font-weight: bold;
+  font-family: Nunito;
+  font-size: 1rem;
+  cursor: pointer;
+
+  transition:
+    transform 0.2s,
+    opacity 0.2s;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.get_in_touch button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+}
+
+#copyright {
+  background-color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px rgba(248, 165, 194, 0.2);
+
+  margin-bottom: 20px;
+  pointer-events: auto;
+
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+
+  color: #888;
+  font-size: 0.95rem;
+}
+
+#copyright h3 {
+  font-weight: 600;
+  color: #666;
+}
+
+#taskbar {
+  width: 100%;
+  height: 62px;
+  background: linear-gradient(90deg, #e8b5c799 0%);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 12px;
+
+  pointer-events: auto;
+  box-shadow: 0 -2px rgba(0, 0, 0, 0.05);
+}
+
+.start-button {
+  background-color: #fef4f8;
+  color: #f8a5c2;
+  border: none;
+  border-radius: 50px;
+  padding: 6px 25px;
+
+  font-weight: 800;
+  font-size: 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.start-button i {
+  font-size: 1.5rem;
+}
+
+.start-button:hover {
+  transform: scale(1.05);
+  background-color: white;
+}
+
+.start-button a{
+  color: #f8a5c2;
+  text-decoration: none;
+}
+
+.time {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-right: 10px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
