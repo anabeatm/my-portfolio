@@ -363,6 +363,7 @@ footer {
   border: none;
   border-radius: 50px;
   padding: 6px 25px;
+  margin-left: 10px;
 
   font-weight: 800;
   font-size: 1rem;
@@ -377,6 +378,7 @@ footer {
 
 .start-button i {
   font-size: 1.5rem;
+  
 }
 
 .start-button:hover {
@@ -389,10 +391,20 @@ footer {
   text-decoration: none;
 }
 
-.time {
+.date-time {
   color: white;
   font-weight: 700;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+
+}
+
+.time {
   font-size: 1.2rem;
   margin-right: 10px;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-left: 32px;
+}
+
+.date {
+  font-size: 0.95rem;
+  margin-right: 10px;
 }

@@ -13,6 +13,25 @@ function attClock() {
     }
 }
 
+function attDate() { 
+    const now = new Date();
+
+    const day = String(now.getDate()).padStart(2, '0');
+    const month = String(now.getMonth() + 1).padStart(2, '0');
+    const year = String(now.getFullYear());
+
+    const formatedDate = `${day}/${month}/${year}`;
+
+    const dateElement = document.querySelector('.date');
+
+    if (dateElement) { 
+        dateElement.textContent = formatedDate;
+    }
+
+}
+
 setInterval(attClock, 1000);
 
 attClock();
+
+attDate();
