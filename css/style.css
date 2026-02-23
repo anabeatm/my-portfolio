@@ -12,7 +12,7 @@ body {
   display: flex;
   justify-content: center;
 
-  zoom: 0.85;
+  zoom: 0.9;
 }
 
 header {
@@ -482,3 +482,4 @@ footer {
   height: 100%;
   color: #555;
 }
+

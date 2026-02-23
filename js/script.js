@@ -1,3 +1,33 @@
+async function apiGithub(data) {
+  try {
+    const response = await fetch("https://api.github.com/users/anabeatm/repos");
+    if (!response.ok) {
+      console.log("No such response");
+      return;
+    }
+
+    const repos = await response.json();
+    const container = document.getElementById("project-list");
+    container.innerHTML = "";
+    const cardRepos = repos.map((repo) => {
+
+      const viewText = data?.viewRepo || "See projects";
+
+      return `
+      <div class="project-card">
+        <h3>${repo.name}</h3>
+        <a href="${repo.html_url}" target="_blank">
+          ${viewText}
+        </a>
+      </div>
+      `;
+    });
+    container.innerHTML = cardRepos.join("");
+  } catch (error) {
+    console.log(error.message);
+  }
+}
+
 function attClock() {
   const now = new Date();
 
