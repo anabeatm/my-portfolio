@@ -1,24 +1,68 @@
-async function apiGithub(data) {
+async function apiGithub() {
   try {
     const response = await fetch("https://api.github.com/users/anabeatm/repos");
     if (!response.ok) {
-      console.log("No such response");
+      console.log("Error: Not found!");
       return;
     }
 
-    const repos = await response.json();
+    let repos = await response.json();
+
+    const inHighlights = {
+      "cute-electron-calendar-widget": {
+        icon: "ph-calendar",
+        bgColor: "#f8a5c2",
+        status: "In Progress",
+      },
+      "music-player": {
+        icon: "ph-music-notes",
+        bgColor: "#d8bfd8",
+        status: "In Progress",
+      },
+      "bee-discord-bot": {
+        icon: "ph-robot",
+        bgColor: "#a5d6a7",
+        status: "In Progress",
+      },
+      "sistema-de-gestao-para-cafeteria": {
+        icon: "ph-coffee",
+        bgColor: "#d6c1a5",
+        status: "In Progress",
+      }
+    };
+
+    repos = repos.filter((repo) => inHighlights[repo.name]);
+
     const container = document.getElementById("project-list");
     container.innerHTML = "";
     const cardRepos = repos.map((repo) => {
+      const config = inHighlights[repo.name];
 
-      const viewText = data?.viewRepo || "See projects";
+      const topics = repo.topics || [];
+      const tagsHTML = topics
+        .map((topic) => `<span class="tag">${topic}</span>`)
+        .join("");
+      const statusClass =
+        config.status === "Live" ? "status-live" : "status-progress";
 
       return `
-      <div class="project-card">
-        <h3>${repo.name}</h3>
-        <a href="${repo.html_url}" target="_blank">
-          ${viewText}
-        </a>
+      <div class="project-card" onclick="window.open('${repo.html_url}', _blank">
+        <div class="project-icon" style="background-color: ${config.bgColor};">
+          <i class="ph ${config.icon}"></i>
+        </div>
+        
+        <div class="project-info">
+          <div class="project-header">
+            <h3><a href="${repo.html_url}" target="_blank">${repo.name.replace(/-/g, " ")}</a></h3>
+            <span class="status-badge ${statusClass}">${config.status}</span>
+          </div>
+          
+          <p class="project-desc">${repo.description || "No description avaible."}</p>
+          
+          <div class="project-tags">
+            ${tagsHTML}
+          </div>
+        </div>
       </div>
       `;
     });
@@ -156,3 +200,5 @@ setInterval(attClock, 1000);
 attClock();
 
 attDate();
+
+apiGithub();
