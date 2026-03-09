@@ -25,10 +25,6 @@ main{
     margin-top: 3rem;
 }
 
-.me-window {
-    
-}
-
 .header-me {
     height: 3rem;
 
@@ -141,12 +137,12 @@ main{
         var(--box-shadow);
 
     font-size: 26px;
-    font-weight: 700;
+    font-weight: var(--font-weight-subtitles);
 
     text-align: center;
 }
 
-.pages ul {
+ul {
     list-style: none;
     display: flex;
     gap: 2.5rem;
@@ -163,7 +159,7 @@ main{
     align-items: center;
     gap: 0.5rem;
 
-    transition: transform 0.2s ease;
+    transition: var(--transform);
 
     font-weight: 600;
     font-size: 16px;
@@ -180,8 +176,162 @@ main{
     height: 4.5rem;
 }
 
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 1rem;
+}
+
+.socials a{
+    background-color:var(--secondary-color);
+    border: var(--border);
+    border-radius: 50px;
+    cursor: pointer;
+
+    box-shadow: var(--box-shadow);
+
+    transition: var(--transform);
+
+    width: 3rem;
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+}
+
+.socials a:hover {
+    transform: translateY(-4px);
+}
+
+.socials img{
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.copyright {
+    background-color: var(--secondary-color);
+    border-radius: 40px;
+    border: var(--border);
+
+    width: fit-content;
+
+    padding: 0.5rem 1rem;
+}
+
+.copyright-text{
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.copyright-text span, .copyright-text a {
+    color: var(--primary-text);
+    font-weight: var(--font-weight-subtitles);
+    font-size: 1rem;
+
+}
+
+.taskbar {
+    background-color: var(--primary-color);
+
+    margin-top: 2rem;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    height: 4.8rem;
+
+    padding: 0 1rem;
+    box-sizing: border-box;
+}
+
+.taskbar-left, .taskbar-right{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.taskbar button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-home img {
+    width: 3.5rem;
+    height: 3.5rem;
+}
+
+.weather {
+    background-color: var(--secondary-color);
+    border: var(--border);
+    border-radius: 40px;
+
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    padding: 0.2rem 1rem;
+}
+
+.weather span {
+    color: var(--primary-text);
+    font-size: 16px;
+    font-weight: var(--font-weight-subtitles);
+}
+
+.weather img{
+    width: 2.6rem;
+    height: 2.6rem;
+}
+
+.sub-task{
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    border-radius: 50px;
+
+    transition: var(--transform);
+}
+
+.sub-task:hover{
+    transform: translateY(-4px);
+}
 
 
+.btn-arrow img {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.date-time {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+
+    color: var(--primary-text);
+    font-weight: var(--font-weight-subtitles);
+    line-height: 1.2;
+
+}
 
 img {
     width: 1.5rem;

@@ -76,45 +76,46 @@
         <nav class="socials" aria-label="Social Media">
           <ul>
             <li class="social">
-              <img
-                src="assets/svg/github-brands-solid-full.svg"
-                alt="A Github icon"
-                aria-hidden="true"
-              />
               <a
                 href="https://github.com/anabeatm"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Github</a
+                aria-label="My Github page"
               >
+                <img
+                  src="assets/svg/github-brands-solid-full.svg"
+                  alt="A Github icon"
+                  aria-hidden="true"
+                />
+              </a>
             </li>
 
             <li class="social">
-              <img
-                src="assets/svg/linkedin-brands-solid-full.svg"
-                alt="A Linkedin icon"
-                aria-hidden="true"
-              />
               <a
                 href="https://www.linkedin.com/in/anabeatavares/"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Linkedin</a
               >
+                <img
+                  src="assets/svg/linkedin-brands-solid-full.svg"
+                  alt="A Linkedin icon"
+                  aria-hidden="true"
+                />
+              </a>
             </li>
 
             <li class="social">
-              <img
-                src="assets/svg/instagram-brands-solid-full.svg"
-                alt="A instagram icon"
-                aria-hidden="true"
-              />
               <a
                 href="https://www.instagram.com/mytsu.mp3"
                 target="_blank"
                 rel="noopener noreferrer"
-                >Instagram</a
               >
+                <img
+                  src="assets/svg/instagram-brands-solid-full.svg"
+                  alt="A instagram icon"
+                  aria-hidden="true"
+                />
+              </a>
             </li>
           </ul>
         </nav>
@@ -122,33 +123,45 @@
     </main>
 
     <footer>
-      <div class="copyright">
-        <span class="copyright-text">created with coffee and insiped by</span>
-        <a href="https://www.sharyap.com/">Sharlene</a>
-      </div>
+      <section class="copyright">
+        <div class="copyright-text">
+          <span>created with coffee and inspired by</span>
+          <a href="https://www.sharyap.com/">Sharlene</a>
+        </div>
+      </section>
 
       <section class="taskbar">
-        <div class="btn-home">
-          <button class="home" aria-label="Start Menu">
-            <img src="assets/svg/home-icon.svg" alt="" aria-hidden="true" />
-          </button>
-        </div>
-        <div class="weather">
-          <span>Tempo C° - Localização</span>
-          <img src="assets/svg/cloud-icon.svg" alt="A cloud icon" />
-        </div>
-        <div class="sub-task">
-          <div class="btn-arrow">
-            <button aria-label="More configurations">
-              <img
-                src="assets/svg/circle-up-regular-full.svg"
-                alt="A circle with a arrow up icon"
-              />
+
+        <div class="taskbar-left">
+          <div class="btn-home">
+            <button class="home" aria-label="Start Menu">
+              <img src="assets/svg/home-icon.svg" alt="" aria-hidden="true" />
             </button>
           </div>
-          <div class="others"></div>
+          <div class="weather">
+            <span>Tempo C° - Localização</span>
+            <img src="assets/svg/cloud-icon.svg" alt="A cloud icon" />
+          </div>
         </div>
-        <time class="date-time" datetime=""></time>
+
+        <div class="taskbar-right">
+          <div class="sub-task">
+            <div class="btn-arrow">
+              <button aria-label="More configurations">
+                <img
+                  src="assets/svg/circle-up-regular-full.svg"
+                  alt="A circle with a arrow up icon"
+                />
+              </button>
+            </div>
+            <div class="others"></div>
+          </div>
+          <time class="date-time" datetime="">
+            <div class="time">00:00</div>
+            <div class="date">01/01/2026</div>
+          </time>
+        </div>
+
       </section>
     </footer>
 
