@@ -1,7 +1,10 @@
 :root {
-    --primary-color: #f8a5c2;
-    --secondary-color: #FFFFFF;
+    --primary-color: #FDE3E7;
+    --secondary-color: #C9DEA0;
     --primary-font: Nunito;
-    --primary-text: #333;
-    
+    --primary-text: #774B43;
+    --border-text: #F8CCD6;
+    --white: #F4F4F4;
+    --border: 3px solid var(--white);
+    --box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
 }

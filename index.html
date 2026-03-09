@@ -1,173 +1,100 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ana's Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jersey+10&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Pixelify+Sans:wght@400..700&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
-    <header>
-      <div id="informations">
-        <nav id="menu">
+    <main>
+      <section class="me-window">
+        <header class="header-me">
+          <span>&lt;main&gt;</span>
+        </header>
+
+        <div class="me">
+          <h1>Hey, I'm Ana Beatriz!</h1>
+          <p>&lt;student, front-end developer, nerd&gt;</p>
+        </div>
+
+        <nav class="pages" aria-label="Windows about me">
           <ul>
             <li>
-              <a href="index.html" class="active">portfolio</a>
+              <img src="" alt="" />
+              <button>&lt;about&gt;</button>
             </li>
+
             <li>
-              <a href="#" id="btn-projects">projects</a>
+              <img src="" alt="" />
+              <button>&lt;projects&gt;</button>
             </li>
+
             <li>
-              <a href="#" id="btn-contact">contact</a>
+              <img src="" alt="" />
+              <button>&lt;contact&gt;</button>
+            </li>
+
+            <li>
+              <img src="" alt="" />
+              <button>&lt;experiences&gt;</button>
             </li>
           </ul>
         </nav>
 
-        <div class="me">
-          <div><img src="assets/placeholder.jpg" alt="me" /></div>
-          <div class="status">
-            <p>online 🍵</p>
-          </div>
-        </div>
+        <nav class="socials" aria-label="Social Media">
+          <ul>
+            <li class="social">
+              <a
+                href="https://github.com/anabeatm"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Github</a
+              >
+            </li>
 
-        <div class="title">
-          <h1><span>my dev</span><br />journey</h1>
-          <p>
-             People call me Ana Beatriz, a enthusiastic student academic from IFPR, Brazil!
-            I'm trying to craft delightful digital inspired by people that i love ✨
-          </p>
-          <nav class="icons">
-            <ul>
-              <li>
-                <a href="https://github.com/anabeatm" target="_blank">
-                  <i class="ph ph-github-logo"></i>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:ana.beat20051@gmail.com?subject=Olá%20,%20vim%20pelo%20portfolio"
-                >
-                  <i class="ph ph-envelope"></i
-                ></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/anabeatavares/"
-                  target="_blank"
-                  ><i class="ph ph-linkedin-logo"></i
-                ></a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div class="get_in_touch">
-          <div class="mailbox">
-            <i class="ph ph-mailbox"></i>
-            <h3>get in touch</h3>
-          </div>
+            <li class="social">
+              <a
+                href="https://www.linkedin.com/in/anabeatavares/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Linkedin</a
+              >
+            </li>
 
-          <div class="email">
-            <div class="icon-box">
-              <i class="ph ph-envelope-simple"></i>
-            </div>
-            <div class="text-info">
-              <p>email</p>
-              <h3>ana.beat20051@gmail.com</h3>
-            </div>
-          </div>
-
-          <div class="location">
-            <div class="icon-box">
-              <i class="ph ph-map-pin"></i>
-            </div>
-            <div class="text-info">
-              <p>location</p>
-              <h3>Paranavaí, Brazil</h3>
-            </div>
-          </div>
-
-          <button type="button">send message 📲</button>
-        </div>
-      </div>
-    </header>
-
-    <main>
-      <div id="window-projects" class="window" style="display: none">
-        <div class="title-bar">
-          <div class="title-bar-text">
-            <i class="ph ph-folder-open"></i>
-            Projects
-          </div>
-          <div class="title-bar-controls">
-            <button class="close-btn" data-target="window-projects">
-              <i class="ph ph-x"></i>
-            </button>
-          </div>
-        </div>
-        <div class="window-content">
-          <h2 class="projects-title" data-i18n="projects-title">
-            My Projects 🌸
-          </h2>
-          <div class="grid-container">
-            <div id="project-list"></div>
-          </div>
-        </div>
-      </div>
-
-      <div id="window-contact" class="window" style="display: none">
-        <div class="title-bar">
-          <div class="title-bar-text">
-            <i class="ph ph-chat-circle-text"></i>
-            Contact
-          </div>
-          <div class="title-bar-controls">
-            <button class="close-btn" data-target="window-contact">
-              <i class="ph ph-x"></i>
-            </button>
-          </div>
-        </div>
-        <div class="window-content">
-          <h2>Chat with me 📫</h2>
-          <p>placeholder</p>
-        </div>
-      </div>
+            <li class="social">
+              <a
+                href="https://www.instagram.com/mytsu.mp3"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Instagram</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </section>
     </main>
 
     <footer>
-      <div id="copyright">
-        <h3>crafted with 💕 and ☕</h3>
-        <p>inspired by</p>
-        <a href="https://www.sharyap.com/" target="_blank">Shaerlene Yap</a>
-      </div>
-      <div id="taskbar">
-        <button type="button" class="btn start-btn">
-          <i class="ph ph-flower-lotus"></i>
-          <a href="https://anabeatm.github.io/my-portfolio/">Start</a>
-        </button>
+      <div class="copyright"></div>
 
-        <div class="taskbar-center">
-          <button type="button" class="btn dark-mode-btn">
-            <i class="ph ph-moon"></i>
-          </button>
-
-          <button type="button" class="btn music">
-            <i class="ph ph-speaker-slash"></i>
+      <section class="taskbar">
+        <div class="btn-home">
+          <button class="home" aria-label="Start Menu">
+            <img src="assets/svg/home-icon.svg" alt="A home icon" />
           </button>
         </div>
-
-        <div class="date-time">
-          <div class="time">00:00</div>
-          <div class="date">00/00/0000</div>
+        <div class="weather"></div>
+        <div class="sub-task">
+          <div class="btn-arrow">
+            <button aria-label="More configurations"></button>
+          </div>
+          <div class="others"></div>
         </div>
-      </div>
+        <time class="date-time" datetime=""></time>
+      </section>
     </footer>
+
     <script type="module" src="js/script.js"></script>
   </body>
 </html>
