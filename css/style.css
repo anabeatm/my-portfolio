@@ -8,11 +8,21 @@
 html {
     font-family: var(--primary-font);
     scroll-behavior: smooth;
+    background-color: #f0f0f0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 main{
     width: 48rem;
     height: 34rem;
+
+    margin-top: 3rem;
 }
 
 .me-window {
@@ -26,8 +36,9 @@ main{
     align-items: center;
     justify-content: space-between;
 
-    border-radius: 10px;
+    border-radius: 14px 14px 0 0;
     border: var(--border);
+    border-bottom: none;
     background-color: var(--secondary-color);
 }
 
@@ -42,8 +53,12 @@ main{
     font-size: 20px;
     
     text-shadow: var(--box-shadow);
-    -webkit-text-stroke-width: 0.3px;
-    -webkit-text-stroke-color: var(--border-text-color);
+    text-shadow: 
+        -2px -2px 0 var(--border-color),
+         2px -2px 0 var(--border-color), 
+        -2px  2px 0 var(--border-color), 
+         2px  2px 0 var(--border-color), 
+        var(--box-shadow);
 }
 
 .header-me img {
@@ -51,21 +66,85 @@ main{
     height: 1.5rem;
 
     padding-right: 0.7rem;
+}
 
+.header-me button {
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.header-me button:hover {
+    transform: translateY(-3px);
 }
 
 .about-me {
     background: var(--primary-color);
     border: var(--border);
-    border-radius: 14px;
+    border-radius: 0 0 14px 14px;
 
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    gap: 2rem;
+
+    padding: 4rem 1rem;
 }
 
-.tile-subtitle {
+.title-subtitle {
+    width: 38rem;
+    height: 7.6rem;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.title-subtitle h1{
+    color: #FFF;
+
+    text-shadow: var(--box-shadow);
+
+    text-shadow: 
+        -2px -2px 0 var(--border-color),
+         2px -2px 0 var(--border-color), 
+        -2px  2px 0 var(--border-color), 
+         2px  2px 0 var(--border-color), 
+        var(--box-shadow);
+
+    font-size: 56px;
+    font-weight: 600;
+
+    text-align: center;
+}
+
+.title-subtitle p{
+    color: var(--primary-text);
+
+    text-shadow: var(--box-shadow);
+
+    text-shadow: 
+        -1px -1px 0 var(--border-color),
+         1px -1px 0 var(--border-color), 
+        -1px  1px 0 var(--border-color), 
+         1px  1px 0 var(--border-color), 
+        var(--box-shadow);
+
+    font-size: 26px;
+    font-weight: 700;
+
+    text-align: center;
+}
+
+.pages {
+    display: flex;
 }
 
 
