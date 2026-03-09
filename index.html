@@ -5,46 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ana's Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <main>
       <section class="me-window">
         <header class="header-me">
           <span>&lt;main&gt;</span>
+          <img src="assets/svg/xmark-solid-full.svg" alt="A X close" />
         </header>
+        <div class="about-me">
+          <div class="title-subtitle">
+            <h1>Hey, I'm Ana Beatriz!</h1>
+            <p>&lt;student, front-end developer, nerd&gt;</p>
+          </div>
 
-        <div class="me">
-          <h1>Hey, I'm Ana Beatriz!</h1>
-          <p>&lt;student, front-end developer, nerd&gt;</p>
+          <nav class="pages" aria-label="Windows about me">
+            <ul>
+              <li>
+                <img
+                  src="assets/svg/personal-icon.svg"
+                  alt="A person icon"
+                  aria-hidden="true"
+                />
+                <button>&lt;about&gt;</button>
+              </li>
+
+              <li>
+                <img
+                  src="assets/svg/pin-icon.svg"
+                  alt="A pin icon"
+                  aria-hidden="true"
+                />
+                <button>&lt;projects&gt;</button>
+              </li>
+
+              <li>
+                <img
+                  src="assets/svg/mail-icon.svg"
+                  alt="A mail icon"
+                  aria-hidden="true"
+                />
+                <button>&lt;contact&gt;</button>
+              </li>
+
+              <li>
+                <img
+                  src="assets/svg/enterprise-icon.svg"
+                  alt="A internet icon"
+                  aria-hidden="true"
+                />
+                <button>&lt;experiences&gt;</button>
+              </li>
+            </ul>
+          </nav>
         </div>
-
-        <nav class="pages" aria-label="Windows about me">
-          <ul>
-            <li>
-              <img src="" alt="" />
-              <button>&lt;about&gt;</button>
-            </li>
-
-            <li>
-              <img src="" alt="" />
-              <button>&lt;projects&gt;</button>
-            </li>
-
-            <li>
-              <img src="" alt="" />
-              <button>&lt;contact&gt;</button>
-            </li>
-
-            <li>
-              <img src="" alt="" />
-              <button>&lt;experiences&gt;</button>
-            </li>
-          </ul>
-        </nav>
 
         <nav class="socials" aria-label="Social Media">
           <ul>
             <li class="social">
+              <img
+                src="assets/svg/github-brands-solid-full.svg"
+                alt="A Github icon"
+                aria-hidden="true"
+              />
               <a
                 href="https://github.com/anabeatm"
                 target="_blank"
@@ -54,6 +83,11 @@
             </li>
 
             <li class="social">
+              <img
+                src="assets/svg/linkedin-brands-solid-full.svg"
+                alt="A Linkedin icon"
+                aria-hidden="true"
+              />
               <a
                 href="https://www.linkedin.com/in/anabeatavares/"
                 target="_blank"
@@ -63,6 +97,11 @@
             </li>
 
             <li class="social">
+              <img
+                src="assets/svg/instagram-brands-solid-full.svg"
+                alt="A instagram icon"
+                aria-hidden="true"
+              />
               <a
                 href="https://www.instagram.com/mytsu.mp3"
                 target="_blank"
@@ -81,13 +120,21 @@
       <section class="taskbar">
         <div class="btn-home">
           <button class="home" aria-label="Start Menu">
-            <img src="assets/svg/home-icon.svg" alt="A home icon" />
+            <img src="assets/svg/home-icon.svg" alt="" aria-hidden="true" />
           </button>
         </div>
-        <div class="weather"></div>
+        <div class="weather">
+          <span>Tempo C° - Localização</span>
+          <img src="assets/svg/cloud-icon.svg" alt="A cloud icon" />
+        </div>
         <div class="sub-task">
           <div class="btn-arrow">
-            <button aria-label="More configurations"></button>
+            <button aria-label="More configurations">
+              <img
+                src="assets/svg/circle-up-regular-full.svg"
+                alt="A circle with a arrow up icon"
+              />
+            </button>
           </div>
           <div class="others"></div>
         </div>

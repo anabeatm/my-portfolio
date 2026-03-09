@@ -1,1 +1,75 @@
 @import "variables.css";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: var(--primary-font);
+    scroll-behavior: smooth;
+}
+
+main{
+    width: 48rem;
+    height: 34rem;
+}
+
+.me-window {
+
+}
+
+.header-me {
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-radius: 10px;
+    border: var(--border);
+    background-color: var(--secondary-color);
+}
+
+.header-me span {
+    width: 5rem;
+    height: 1.3rem;
+
+    padding: 0.7rem;
+    margin-bottom: 0.75rem;
+
+    color: var(--white);
+    font-size: 20px;
+    
+    text-shadow: var(--box-shadow);
+    -webkit-text-stroke-width: 0.3px;
+    -webkit-text-stroke-color: var(--border-text-color);
+}
+
+.header-me img {
+    width: 1.5rem;
+    height: 1.5rem;
+
+    padding-right: 0.7rem;
+
+}
+
+.about-me {
+    background: var(--primary-color);
+    border: var(--border);
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tile-subtitle {
+
+}
+
+
+img {
+    width: 1.5rem;
+    height: 1.5rem;
+}
