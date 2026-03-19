@@ -387,6 +387,7 @@ footer {
 }
 
 .btn-close-os {
+    background-color: transparent;
     color: var(--secondary-color);
     border: none;
     border-radius: 50%;
@@ -397,9 +398,10 @@ footer {
     display: center;
     align-items: center;
     justify-content: center;
+
+    transition: 0.2s ease;
 }
 
-/* img {
-    width: 1.5rem;
-    height: 1.5rem;
-} */
+.btn-close-os:hover {
+    transform: translateY(-3px);
+}
