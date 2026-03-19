@@ -6,7 +6,12 @@ export const pageData = {
   },
   projects: {
     title: "My Projects",
-    reposToDisplay: ["music-player-flutter", "cute-electron-calendar-widget"],
+    reposToDisplay: [
+      "music-player-flutter",
+      "cute-electron-calendar-widget",
+      "ong-landing-page",
+      "my-portfolio",
+    ],
     content: "<div id='github-loading'>Loading projects...</div>",
   },
   contact: {

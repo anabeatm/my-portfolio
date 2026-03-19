@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  height: 100%;
+  max-height: 450px;
   overflow-y: auto; 
 }
 
@@ -35,7 +35,7 @@
 .repo-name {
   margin: 0 0 8px 0;
   font-size: 1.1rem;
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito';
 }
 
 .repo-desc {
@@ -54,4 +54,24 @@
 .repo-link:hover .repo-desc,
 .repo-link:hover .repo-stats {
   color: var(--primary-text); 
+}
+
+/* estilizando a barra de rolagem */
+.github-projects-list::-webkit-scrollbar {
+  width: 12px; 
+}
+
+.github-projects-list::-webkit-scrollbar-track {
+  background: #e0e0e0; 
+  border-radius: 8px;
+}
+
+.github-projects-list::-webkit-scrollbar-thumb {
+  background-color: var(--secondary-color, #a5cba5); 
+  border-radius: 8px;
+  border: 2px solid #e0e0e0; 
+}
+
+.github-projects-list::-webkit-scrollbar-thumb:hover {
+  background-color: var(--primary-color, #7aa87a); 
 }
