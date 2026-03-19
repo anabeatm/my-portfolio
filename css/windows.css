@@ -1,0 +1,50 @@
+/* DESIGN OF THE PAGES WHEN OPEN */
+
+.os-pages {
+    position: absolute; /* vai permitir que as janelas flutuem no site */
+    width: 19rem;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
+}
+
+.os-pages-header {
+    cursor: grab;
+    background: var(--primary-color);
+    padding: 0.9rem 1rem;
+
+    display: flex;
+    justify-content: space-between; /*titulo de um lado, botão de x do outro*/
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+}
+
+.os-pages-header:active {
+    cursor: grabbing;
+}
+
+.os-pages-body {
+    padding: 1.5rem;
+    min-height: 6rem;
+}
+
+.btn-close-os {
+    background-color: transparent;
+    color: var(--secondary-color);
+    border: none;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    display: center;
+    align-items: center;
+    justify-content: center;
+
+    transition: 0.2s ease;
+}
+
+.btn-close-os:hover {
+    transform: translateY(-3px);
+}

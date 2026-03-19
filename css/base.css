@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: var(--primary-font);
+    scroll-behavior: smooth;
+    background-color: #f0f0f0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    min-height: 100vh;
+}
+
+main{
+    width: 48rem;
+    height: 34rem;
+
+    margin-top: auto;
+}
