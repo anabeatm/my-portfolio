@@ -1,27 +1,13 @@
-const pageData = {
-  about: {
-    title: "About Me",
-    content: "<h2>Olá!</h2><p>placeholder</p>",
-  },
-  projects: {
-    title: "My Projects",
-    content: "<ul><li>Projeto 1</li><li>Projeto 2</li></ul>",
-  },
-  contact: {
-    title: "Contact",
-    content: "<p>Email: contato@email.com</p><p>LinkedIn: /in/usuario</p>",
-  },
-  path: {
-    title: "Career Path",
-    content: "<p>Minha jornada começou em 202X...</p>",
-  },
-};
+import { pageData } from "./data.js";
 
 let zIndexGlobal = 1;
 let getWindows = 1;
 
-function openPage(key) {
+export function openPage(key) {
   const data = pageData[key];
+
+  if (!data) return; // caso a chave não exista
+
   const page = document.createElement("div"); // janela principal
   page.classList.add("os-pages");
 
@@ -85,46 +71,4 @@ function openPage(key) {
     page.style.top = page.offsetTop - posMouseY + "px"; // a distancia movida de top e left atuais da page
     page.style.left = page.offsetLeft - posMouseX + "px";
   }
-
-  function dropPage() {
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
 }
-
-function attClock() {
-  const now = new Date();
-
-  const hours = String(now.getHours()).padStart(2, "0");
-  const minutes = String(now.getMinutes()).padStart(2, "0");
-
-  const formatedTime = `${hours}:${minutes}`;
-
-  const clockElement = document.querySelector(".time");
-
-  if (clockElement) {
-    clockElement.textContent = formatedTime;
-  }
-}
-
-function attDate() {
-  const now = new Date();
-
-  const day = String(now.getDate()).padStart(2, "0");
-  const month = String(now.getMonth() + 1).padStart(2, "0");
-  const year = String(now.getFullYear());
-
-  const formatedDate = `${day}/${month}/${year}`;
-
-  const dateElement = document.querySelector(".date");
-
-  if (dateElement) {
-    dateElement.textContent = formatedDate;
-  }
-}
-
-setInterval(attClock, 1000);
-
-attClock();
-
-attDate();
