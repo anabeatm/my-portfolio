@@ -6,7 +6,8 @@ export const pageData = {
   },
   projects: {
     title: "My Projects",
-    content: "<ul><li>Projeto 1</li><li>Projeto 2</li></ul>",
+    reposToDisplay: ["music-player-flutter", "cute-electron-calendar-widget"],
+    content: "<div id='github-loading'>Loading projects...</div>",
   },
   contact: {
     title: "Contact",

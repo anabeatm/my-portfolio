@@ -37,6 +37,10 @@ export function openPage(key) {
   page.appendChild(body);
   document.body.appendChild(page); // junta tudo
 
+  if (key == "projects" && data.reposToDisplay) {
+    fetchGithubProjects(data.reposToDisplay, body);
+  }
+
   page.addEventListener("mousedown", () => {
     page.style.zIndex = zIndexGlobal++; // traz a janela para frente smp q clicar nela
   });
@@ -74,5 +78,41 @@ export function openPage(key) {
   function dropPage() {
     document.onmouseup = null;
     document.onmousemove = null;
+  }
+}
+
+async function fetchGithubProjects(reposToDisplay, containerNode) {
+  try {
+    const response = await fetch("https://api.github.com/users/anabeatm/repos");
+    const allRepos = await response.json();
+
+    const filteredRepos = allRepos.filter((repo) =>
+      reposToDisplay.includes(repo.name),
+    );
+
+    let html = '<ul class="github-projects-list">';
+    filteredRepos.forEach((repo) => {
+      html += `
+        <li class="github-repo-item">
+          <a href="${repo.html_url}" target="_blank" rel="noopener noreferrer" class="repo-link">
+            <div class="repo-info">
+              <h3 class="repo-name">📁 ${repo.name}</h3>
+              <p class="repo-desc">${repo.description || "No description or website provided"}</p>
+              <div class="repo-stats">
+                <span>⭐ ${repo.stargazers_count}</span>
+                <span>${repo.language ? `💻 ${repo.language}` : ""}</span>
+              </div>
+            </div>
+          </a>
+        </li>
+      `;
+    });
+    html += "</ul>";
+
+    containerNode.innerHTML = html;
+  } catch {
+    console.error("Error: ", error);
+    containerNode.innerHTML =
+      "<p>An error occurred while loading the projects..</p>";
   }
 }

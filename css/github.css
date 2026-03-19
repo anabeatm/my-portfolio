@@ -1,0 +1,57 @@
+.github-projects-list {
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 100%;
+  overflow-y: auto; 
+}
+
+.github-repo-item {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.repo-link {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  border-radius: 1rem;
+  color: #000000;
+  cursor: pointer;
+  transition: background-color 0.1s;
+}
+
+.repo-link:hover {
+  background-color: var(--primary-color); 
+  color: var(--primary-text);
+}
+
+.repo-name {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+  font-family: 'Nunito', sans-serif;
+}
+
+.repo-desc {
+  margin: 0 0 12px 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.repo-stats {
+  display: flex;
+  gap: 15px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.repo-link:hover .repo-desc,
+.repo-link:hover .repo-stats {
+  color: var(--primary-text); 
+}
