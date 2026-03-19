@@ -11,9 +11,8 @@ export function openPage(key) {
   const page = document.createElement("div"); // janela principal
   page.classList.add("os-pages");
 
-  page.style.top = 50 + (getWindows % 10) * 20 + "px";
-  page.style.left = 50 + (getWindows % 10) * 20 + "px";
-  getWindows++;
+  page.style.top = 50 + getWindows * 20 + "px"; // posição inicial
+  page.style.left = 50 + getWindows * 20 + "px";
 
   page.style.zIndex = zIndexGlobal++; // nasce na frente de todos
 
@@ -70,5 +69,10 @@ export function openPage(key) {
 
     page.style.top = page.offsetTop - posMouseY + "px"; // a distancia movida de top e left atuais da page
     page.style.left = page.offsetLeft - posMouseX + "px";
+  }
+
+  function dropPage() {
+    document.onmouseup = null;
+    document.onmousemove = null;
   }
 }

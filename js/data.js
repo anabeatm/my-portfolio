@@ -1,7 +1,8 @@
 export const pageData = {
   about: {
     title: "About Me",
-    content: "<h2>Olá!</h2><p>placeholder</p>",
+    content:
+      "<h2>Hi!</h2><p>I'm a college student in IFPR - Brazil and a enthusiastic front-end developer</p>",
   },
   projects: {
     title: "My Projects",
@@ -9,7 +10,7 @@ export const pageData = {
   },
   contact: {
     title: "Contact",
-    content: "<p>Email: contato@email.com</p><p>LinkedIn: /in/usuario</p>",
+    content: "<p>Email: ana.beat20051@gmail.com</p>",
   },
   path: {
     title: "Career Path",
