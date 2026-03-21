@@ -1,6 +1,6 @@
 .os-pages {
     position: absolute; /* vai permitir que as janelas flutuem no site */
-    width: 19rem;
+    width: 25rem;
     background-color: var(--white);
     border-radius: 10px;
     box-shadow: var(--box-shadow);
@@ -28,7 +28,7 @@
 }
 
 .os-pages-body {
-    padding: 1.5rem;
+    padding: 1.2rem;
     min-height: 6rem;
 }
 

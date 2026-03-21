@@ -8,6 +8,8 @@ export const pageData = {
     title: "My Projects",
     reposToDisplay: [
       "music-player-flutter",
+      "jogo-da-memoria",
+      "jogo-de-adivinhacao",
       "cute-electron-calendar-widget",
       "ong-landing-page",
       "my-portfolio",
