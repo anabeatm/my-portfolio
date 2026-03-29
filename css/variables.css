@@ -1,12 +1,27 @@
 :root {
+    --bg-color: #efefef;
     --primary-color: #FDE3E7;
     --secondary-color: #C9DEA0;
     --primary-font: Nunito;
     --primary-text: #774B43;
     --border-color: #F8CCD6;
-    --white: #F4F4F4;
+    --white: #f8f8f8;
     --border: 3px solid var(--white);
     --box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     --transform: transform 0.2s ease;
     --font-weight-subtitles: 700;
+}
+
+body.dark-mode {
+    --bg-color: #767676;
+    --primary-color: #5a634f;
+    --secondary-color:  #634f4f;
+    --primary-text: #f9c8cf;
+    --border-color: #F8CCD6;
+    --white: #7f7f7f;
+    --border: 3px solid var(--white);
+}
+
+body, .taskbar, .weather, .sub-task, .copyright, .others {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
 }

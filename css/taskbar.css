@@ -138,3 +138,63 @@ footer {
     line-height: 1.2;
 
 }
+
+.sub-task {
+    position: relative; 
+}
+
+.others {
+    position: absolute;
+    bottom: 225%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    background-color: var(--secondary-color);
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--white);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    
+    display: flex;
+    gap: 1rem;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.others.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.others button {
+    font-size: 1.5rem;
+    color: #000;
+    transition: transform 0.2s ease;
+}
+
+.others button:hover {
+    transform: scale(1.1);
+}
+
+.others button img {
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+}
+
+#mini-player-container {
+    position: fixed;
+    bottom: 10rem;
+    right: 2rem;
+    width: 300px;
+    z-index: 100;
+    transition: all 0.3s ease;
+}
+
+#mini-player-container.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+}
