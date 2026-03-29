@@ -1,4 +1,5 @@
 import { pageData } from "./data.js";
+import { getGithubRepos } from "./api.js";
 
 let zIndexGlobal = 1;
 let getWindows = 1;
@@ -83,12 +84,7 @@ export function openPage(key) {
 
 async function fetchGithubProjects(reposToDisplay, containerNode) {
   try {
-    const response = await fetch("https://api.github.com/users/anabeatm/repos");
-    const allRepos = await response.json();
-
-    const filteredRepos = allRepos.filter((repo) =>
-      reposToDisplay.includes(repo.name),
-    );
+    const filteredRepos = await getGithubRepos(reposToDisplay);
 
     let html = '<ul class="github-projects-list">';
     filteredRepos.forEach((repo) => {
@@ -111,7 +107,6 @@ async function fetchGithubProjects(reposToDisplay, containerNode) {
 
     containerNode.innerHTML = html;
   } catch {
-    console.error("Error: ", error);
     containerNode.innerHTML =
       "<p>An error occurred while loading the projects..</p>";
   }
