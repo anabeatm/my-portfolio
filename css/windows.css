@@ -32,9 +32,19 @@
     min-height: 6rem;
 }
 
+.os-pages-body h2, p {
+    color: var(--primary-text);
+    font-weight: bolder;
+}
+
+.repo-name, .repo-stats {
+    color: var(--primary-text);
+    font-weight: 800;
+}
+
 .btn-close-os {
     background-color: transparent;
-    color: var(--secondary-color);
+    color: var(--primary-text);
     border: none;
     border-radius: 50%;
     width: 2rem;
