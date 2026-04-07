@@ -28,8 +28,8 @@
         </header>
         <div class="about-me">
           <div class="title-subtitle">
-            <h1>Hey, I'm Ana Beatriz!</h1>
-            <p>&lt;student & front-end developer&gt;</p>
+            <h1 data-i18n="greeting">Hey, I'm Ana Beatriz!</h1>
+            <p data-i18n="role">&lt;student &amp; front-end developer&gt;</p>
           </div>
 
           <nav class="pages" aria-label="Windows about me">
@@ -41,7 +41,7 @@
                     alt="A person icon"
                     aria-hidden="true"
                   />
-                  &lt;about&gt;
+                  <span data-i18n="about">&lt;about&gt;</span>
                 </button>
               </li>
 
@@ -51,7 +51,7 @@
                     src="assets/svg/pin-icon.svg"
                     alt="A pin icon"
                     aria-hidden="true"
-                  />&lt;projects&gt;
+                  /><span data-i18n="projects">&lt;projects&gt;</span>
                 </button>
               </li>
 
@@ -61,7 +61,7 @@
                     src="assets/svg/mail-icon.svg"
                     alt="A mail icon"
                     aria-hidden="true"
-                  />&lt;contact&gt;
+                  /><span data-i18n="contact">&lt;contact&gt;</span>
                 </button>
               </li>
 
@@ -71,7 +71,7 @@
                     src="assets/svg/enterprise-icon.svg"
                     alt="A internet icon"
                     aria-hidden="true"
-                  />&lt;path&gt;
+                  /><span data-i18n="path">&lt;path&gt;</span>
                 </button>
               </li>
             </ul>
@@ -130,7 +130,7 @@
     <footer>
       <section class="copyright">
         <div class="copyright-text">
-          <span>created with coffee and inspired by</span>
+          <span data-i18n="copyright">created with coffee and inspired by</span>
           <a href="https://www.sharyap.com/" target="_blank">Sharlene</a>
         </div>
       </section>
@@ -169,6 +169,9 @@
               </button>
               <button id="toggle-theme-btn" aria-label="Toggle dark mode">
                 <img src="assets/svg/sun-solid-full.svg" alt="" />
+              </button>
+              <button id="toggle-lang-btn" aria-label="Change language">
+                🇧🇷
               </button>
             </div>
           </div>

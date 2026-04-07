@@ -1,0 +1,136 @@
+@media (max-width: 768px) {
+    html, body {
+        overflow-x: hidden; 
+        width: 100%;
+        position: relative;
+    }
+
+    main {
+        width: 100%;
+        padding: 1rem;
+        box-sizing: border-box;
+        margin-top: 2rem !important; 
+
+        padding-bottom: 8rem !important; 
+    }
+
+    .me-window {
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    .title-subtitle h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .title-subtitle p {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .about-me {
+        gap: 0;
+    }
+    .pages ul {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1rem 0;
+    }
+
+    .socials ul {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+
+    .copyright, .date-time {
+        display: none !important; 
+    }
+
+    footer {
+        position: fixed;
+        bottom: 1rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%; 
+        z-index: 1000;
+    }
+
+    .taskbar {
+        margin-top: 0;
+        border-radius: 30px;
+        height: auto;
+        padding: 0.6rem 1rem;
+        justify-content: space-between;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+        gap: 0;
+    }
+
+    .taskbar-left, .taskbar-right {
+        gap: 0.5rem;
+    }
+
+    .weather {
+        padding: 0.3rem 0.6rem;
+    }
+    
+    .weather span {
+        font-size: 0.75rem; 
+    }
+    
+    .weather img {
+        width: 1.8rem;
+        height: 1.8rem;
+    }
+
+    .btn-home img {
+        width: 2.2rem;
+        height: 2.2rem;
+    }
+    
+    .others {
+        bottom: calc(100% + 20px); 
+        left: auto; 
+        right: -5px; 
+        transform: none; 
+        padding: 0.4rem 0.8rem; 
+        gap: 1rem; 
+        border-radius: 20px; 
+    }
+
+    .others button img {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    #mini-player-container {
+        bottom: 5.5rem; 
+        right: 50%;
+        transform: translateX(50%);
+        width: 90%;
+    }
+
+    .os-pages {
+        top: auto !important; 
+        left: 0 !important;
+        bottom: -100% !important; 
+        width: 100% !important;
+        height: 70vh !important;
+        position: fixed !important;
+        border-radius: 25px 25px 0 0 !important; 
+        transition: bottom 0.4s cubic-bezier(0.2, 0.8, 0.2, 1) !important;
+        z-index: 9999 !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .os-pages.slide-up {
+        bottom: 0 !important;
+    }
+
+    .os-pages-body {
+        flex: 1;
+        overflow-y: auto;
+    }
+}

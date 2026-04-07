@@ -25,7 +25,14 @@ export function openPage(key) {
   closeBtn.classList.add("btn-close-os");
   closeBtn.innerText = "X";
 
-  closeBtn.onclick = () => page.remove(); // ao clicar, fecha a janela
+  closeBtn.onclick = () => {
+    if (window.innerWidth <= 768) {
+      page.classList.remove("slide-up");
+      setTimeout(() => page.remove(), 400);
+    } else {
+      page.remove(); // ao clicar, fecha a janela
+    }
+  };
 
   header.appendChild(closeBtn);
 
@@ -37,6 +44,10 @@ export function openPage(key) {
   page.appendChild(header);
   page.appendChild(body);
   document.body.appendChild(page); // junta tudo
+
+  requestAnimationFrame(() => {
+    page.classList.add("slide-up"); // animação ao abrir pagina no cllr
+  });
 
   if (key == "projects" && data.reposToDisplay) {
     fetchGithubProjects(data.reposToDisplay, body);
@@ -52,6 +63,7 @@ export function openPage(key) {
   let posStartY = 0; //x horizontal e y vertical
 
   header.onmousedown = function (e) {
+    if (window.innerWidth <= 768) return;
     // quando agarra o header da janela
     e.preventDefault(); // cancela um evento se for possível ser cancelado
     // por exemplo: cancela um link de seguir a URL - W3 School
