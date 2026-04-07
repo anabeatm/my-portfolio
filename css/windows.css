@@ -61,3 +61,32 @@
 .btn-close-os:hover {
     transform: translateY(-3px);
 }
+
+.btn-email {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    
+    background-color: var(--secondary-color); 
+    color: var(--primary-text);
+    
+    border: var(--border); 
+    border-radius: 12px;
+    
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: var(--box-shadow);
+    
+    transition: var(--transform); 
+    cursor: pointer;
+}
+
+.btn-email:hover {
+    transform: translateY(-4px);
+    filter: brightness(1.05);
+}
+
+.btn-email:active {
+    transform: translateY(0);
+}

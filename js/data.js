@@ -18,10 +18,15 @@ export const pageData = {
   },
   contact: {
     title: "Contact",
-    content: "<p>Email: ana.beat20051@gmail.com</p>",
+    content: `
+      <p>Hey, if you are interested, please contact me!
+      Email: ana.beat20051@gmail.com</p>
+      <a href="mailto:ana.beat20051@gmail.com" class="btn-email">Send me a mail!</a>
+    `,
   },
   path: {
     title: "Career Path",
-    content: "<p>Minha jornada começou em 202X...</p>",
+    content:
+      "<p>I started my programming journey in Python, watching Guanabara's videos. After that, when I entered the Software Engineering program at IFPR, I began to delve headfirst into the world of IT and develop an interest, mainly in the client-server side, or front-end.</p>",
   },
 };
