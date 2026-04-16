@@ -10,8 +10,11 @@ export async function getGithubRepos(repos) {
 
     return allRepos.filter((repo) => repos.includes(repo.name));
   } catch (error) {
-    console.error("GitHub API error: ", error);
-    throw error;
+    const errorMsg = error.message || "Erro desconhecido na requisição.";
+    containerNode.innerHTML =
+      currentLang === "pt"
+        ? `<p style="color: #d9534f;"><strong>Erro ao carregar os projetos da API do GitHub.</strong><br><small>Detalhes: ${errorMsg}</small></p>`
+        : `<p style="color: #d9534f;"><strong>An error occurred while loading projects from the GitHub API.</strong><br><small>Details: ${errorMsg}</small></p>`;
   }
 }
 
@@ -27,7 +30,10 @@ export async function getWeather(latitude, longitude, apiKey) {
 
     return await response.json();
   } catch (error) {
-      console.error("Weather API error: ", error);
-      throw error;
+    const errorMsg = error.message || "Erro desconhecido na requisição.";
+    containerNode.innerHTML =
+      currentLang === "pt"
+        ? `<p style="color: #d9534f;"><strong>Erro ao carregar os dados da API de Clima.</strong><br><small>Detalhes: ${errorMsg}</small></p>`
+        : `<p style="color: #d9534f;"><strong>An error occurred while loading data from the Weather API.</strong><br><small>Details: ${errorMsg}</small></p>`;
   }
 }

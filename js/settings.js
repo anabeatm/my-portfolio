@@ -13,14 +13,27 @@ export function initSettings() {
   }
 
   if (toggleThemeBtn) {
+    const themeIcon = toggleThemeBtn.querySelector("img");
+    const savedTheme = localStorage.getItem("portfolio-theme");
+    const systemPrefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+
+    if (savedTheme === "dark" || (!savedTheme && systemPrefersDark)) {
+      document.body.classList.add("dark-mode");
+      themeIcon.src = "assets/svg/moon-solid-full.svg";
+    } else {
+      themeIcon.src = "assets/svg/sun-solid-full.svg";
+    }
     toggleThemeBtn.addEventListener("click", () => {
       document.body.classList.toggle("dark-mode");
-      const themeIcon = toggleThemeBtn.querySelector("img");
-
-      if (document.body.classList.contains("dark-mode")) {
+      const isDarkMode = document.body.classList.contains("dark-mode");
+      if (isDarkMode) {
         themeIcon.src = "assets/svg/moon-solid-full.svg";
+        localStorage.setItem("portfolio-theme", "dark");
       } else {
         themeIcon.src = "assets/svg/sun-solid-full.svg";
+        localStorage.setItem("portfolio-theme", "light");
       }
     });
   }
