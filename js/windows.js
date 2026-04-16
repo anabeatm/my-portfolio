@@ -5,7 +5,9 @@ let zIndexGlobal = 1;
 let getWindows = 1;
 
 export function openPage(key) {
-  const data = pageData[key];
+  const currentLang = localStorage.getItem("portfolio-lang") || "en";
+
+  const data = pageData[currentLang][key];
 
   if (!data) return; // caso a chave não exista
 
@@ -27,8 +29,9 @@ export function openPage(key) {
 
   closeBtn.onclick = () => {
     if (window.innerWidth <= 768) {
+      //se estiver no celular tira a classe para descer com animação primeiro
       page.classList.remove("slide-up");
-      setTimeout(() => page.remove(), 400);
+      setTimeout(() => page.remove(), 400); // espera 400 milisegundoantes de deletar o html
     } else {
       page.remove(); // ao clicar, fecha a janela
     }
@@ -95,6 +98,7 @@ export function openPage(key) {
 }
 
 async function fetchGithubProjects(reposToDisplay, containerNode) {
+  const currentLang = localStorage.getItem("portfolio-lang") || "en";
   try {
     const filteredRepos = await getGithubRepos(reposToDisplay);
 
@@ -120,6 +124,8 @@ async function fetchGithubProjects(reposToDisplay, containerNode) {
     containerNode.innerHTML = html;
   } catch {
     containerNode.innerHTML =
-      "<p>An error occurred while loading the projects..</p>";
+      currentLang === "pt"
+        ? "<p>Ocorreu um erro ao carregar os projetos.</p>"
+        : "<p>An error occurred while loading the projects..</p>";
   }
 }
